@@ -8,7 +8,6 @@ export default function Home() {
         <title>Hlbessa's Portfolio</title>
       </Head>
 
-          {/*Header*/}
     <Header/>
           {/*Hero*/}
 
