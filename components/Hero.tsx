@@ -11,7 +11,7 @@ type Props = {
 export default function Hero({}: Props) {
     const [text] = useTypewriter({
         words: ["Hi, The Name's AbdElrahman Gbr",
-        "Guy-Who-Loves-Gaming",
+        "Guy-Who-Loves-Coffe.jsx",
         "<ButLovesToCodeMore />"
         ],
         loop: true,
@@ -31,9 +31,9 @@ export default function Hero({}: Props) {
                     <Link href={"#about"}>
                         <button className={"heroButton"}>About</button>
                     </Link>
-                    <Link href={"#experience"}>
-                        <button className={"heroButton"}>Experience</button>
-                    </Link>
+                    {/*<Link href={"#experience"}>*/}
+                    {/*    <button className={"heroButton"}>Experience</button>*/}
+                    {/*</Link>*/}
                     <Link href={"#skills"}>
                         <button className={"heroButton"}>Skills</button>
                     </Link>
