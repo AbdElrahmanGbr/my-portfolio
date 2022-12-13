@@ -24,7 +24,7 @@ function Projects({}: Props) {
                     src={"./spud.png"} alt={""}/>
                 <div className={"space-y-10 px-0 md:px-10 max-w-6xl "}>
                     <h4 className={"text-4xl font-semibold text-center"}>
-                                <span className={"underline decoration-[#F7AB0A]/10"}>
+                                <span className={"underline decoration-[#F7AB0A]/50"}>
                                 Case Study {i + 1} of {projects.length}:</span>{" "} TodoList</h4>
                     <p className={"text-lg text-center md:text-left"}>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet architecto, asperiores atque
