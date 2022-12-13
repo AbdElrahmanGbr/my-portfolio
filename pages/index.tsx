@@ -53,7 +53,7 @@ const Home = ({pageInfo, experiences, skills, projects, socials}: Props) => {
             <footer className={"sticky bottom-5 w-full cursor-pointer"}>
                 <div className={"flex items-center justify-center"}>
                     <img className={"h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"}
-                         src="./spud.png" alt=""/>
+                         src="https://cdn-icons-png.flaticon.com/512/3082/3082422.png" alt=""/>
                 </div>
             </footer>
         </Link>
