@@ -9,11 +9,8 @@ import ContactMe from "../components/ContactMe";
 import {GetStaticProps} from "next";
 import Link from "next/link";
 import {Experience, PageInfo, Project, Skill, Social} from "../typings";
-import {fetchPageInfo} from "../utils/fetchPageInfo";
-import {fetchSocials} from "../utils/fetchSocials";
-import {fetchSkills} from "../utils/fetchSkills";
-import {fetchProjects} from "../utils/fetchProjects";
-import {fetchExperiences} from "../utils/fetchExperiences";
+import {fetchExperiences, fetchPageInfo, fetchProjects, fetchSkills, fetchSocials} from "../utils/fetchData";
+import WorkExperience from "../components/WorkExperience";
 
 type Props = {
     pageInfo: PageInfo; skills: Skill[]; experiences: Experience[]; projects: Project[]; socials: Social[];
@@ -22,7 +19,7 @@ const Home = ({pageInfo, experiences, skills, projects, socials}: Props) => {
     return (<div
         className={"bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"}>
         <Head>
-            <title>AbdElrahman's Portfolio</title>
+            <title>AbdElrahman&apos;s Portfolio</title>
         </Head>
 
         <Header socials={socials}/>
@@ -34,9 +31,9 @@ const Home = ({pageInfo, experiences, skills, projects, socials}: Props) => {
             <About pageInfo={pageInfo}/>
         </section>
 
-        {/*<section id={"experience"} className={"snap-center"}>*/}
-        {/*    <WorkExperience experiences={experiences} />*/}
-        {/*</section>*/}
+        <section id={"experience"} className={"snap-center"}>
+            <WorkExperience experiences={experiences} />
+        </section>
 
         <section id={"skills"} className={"snap-start"}>
             <Skills skills={skills}/>
@@ -72,6 +69,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
         props: {
             pageInfo, experiences, skills, projects, socials
         },
-        revalidate: 10,
+        revalidate: 60,
     }
 }
